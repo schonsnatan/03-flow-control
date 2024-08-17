@@ -1,6 +1,5 @@
 print("\nAULA 03\n")
 
-'''
 x = 2
 
 if x < 0:
