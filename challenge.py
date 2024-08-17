@@ -1,4 +1,3 @@
-#WIP
 CONSTANTE_BONUS = 1000
 
 #Request the name for the user:
