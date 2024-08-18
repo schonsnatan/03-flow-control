@@ -2,13 +2,13 @@ CONSTANTE_BONUS = 1000
 
 #Request the name for the user:
 
-nameCheck = True
-salCheck = True
-bonusCheck = True
+nameCheck: bool = True
+salCheck: bool = True
+bonusCheck: bool = True
 
 while nameCheck:
     try:
-        name = input("Type your name: ")
+        name: str = input("Type your name: ")
         if len(name)==0:
             raise ValueError("Please provide a name")
         elif any(char.isdigit() for char in name):
@@ -24,7 +24,7 @@ while nameCheck:
 #Request the salary:
 while salCheck:
     try:
-        sal = float(input("Informe seu salario: "))
+        sal: float = float(input("Informe seu salario: "))
         if sal<=0:
             raise ValueError("Inform a positive and non-zero value")
         else:
@@ -35,7 +35,7 @@ while salCheck:
 while bonusCheck:
     #Request the bonus value:
     try:
-        bonus = float(input("Digite o seu bonus: "))
+        bonus: float = float(input("Digite o seu bonus: "))
         if bonus < 0:
             raise ValueError("Inform a positive bonus.")
         else:
@@ -45,8 +45,8 @@ while bonusCheck:
 
 
 #Print the informations for the user:
-final_bonus = CONSTANTE_BONUS + sal * bonus
-kpi = (sal + final_bonus) / 1000
+final_bonus: float = CONSTANTE_BONUS + sal * bonus
+kpi: float = (sal + final_bonus) / 1000
 
 print(f"Your KPI is: {kpi:.2f}")
 print(f"{name}, your salary is ${sal:.2f} and your final bonus is ${final_bonus:.2f}")
